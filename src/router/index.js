@@ -1,23 +1,40 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomePage from '@/views/HomePage.vue';
+import MobaPage from '@/views/MobaPage.vue';
+import MmorpgPage from '@/views/MmorpgPage.vue';
+import ShooterPage from '@/views/ShooterPage.vue';
+import OtherPage from '@/views/OtherPage.vue';
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'HomePage',
+    component: HomePage
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/moba',
+    name: 'MobaPage',
+    component: MobaPage
+  },
+  {
+    path: '/mmo',
+    name: 'MmorpgPage',
+    component: MmorpgPage
+  },
+  {
+    path: '/shooter',
+    name: 'ShooterPage',
+    component: ShooterPage
+  },
+  {
+    path: '/other',
+    name: 'OtherPage',
+    component: OtherPage
+  },
 ]
 
 const router = new VueRouter({
